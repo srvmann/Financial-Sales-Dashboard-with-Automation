@@ -21,10 +21,10 @@ The initial process involved manually receiving, downloading, combining (approx.
 
 The following hybrid solution was implemented to manage the daily influx of approximately 25 files, ensuring data was consolidated and ready for the Power BI model:
 
-1.  **Email Standardisation & Filtering:** Mail senders were instructed to include **"Credit Score"** in the email subject line. This keyword was used by the email client (or a rule) to filter the daily files into a separate folder automatically.
+1.  **Email Standardisation & Filtering:** Mail senders were instructed to include **"Credit Score"** in the email subject line. This keyword was used as a rule to filter the daily files into a separate folder automatically.
 2.  **Cloud Transfer (Power Automate):** **Power Automate** was configured to monitor this dedicated email folder and automatically transfer all attachment files to a specific directory within **Google Drive**.
 3.  **Data Integration (Power BI & API):** An **API connection** was established to link Google Drive directly to the Power BI service, ensuring a live connection to the raw files.
-4.  **Data Processing & Combination (Python):** A **Python script** utilising the **`google-auth`** (or a similar Google Drive API client) library was used to access the files in Google Drive. This script performed the critical task of **reading and combining all individual files** into a single consolidated dataset, which the Power BI model then consumed to solve the analytical requirements.
+4.  **Data Processing & Combination (Python):** A **Python script** utilising the **`google-auth`** library was used to access the files in Google Drive. This script performed the critical task of **reading and combining all individual files** into a single consolidated dataset, which the Power BI model then consumed to solve the analytical requirements.
 5.  **Manual Cleanup:** The only non-automated step remaining in the pipeline is the **manual deletion** of the old daily data from Google Drive to manage storage and ensure a clean environment for the next day's upload.
 
 ---
