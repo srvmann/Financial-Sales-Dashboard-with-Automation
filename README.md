@@ -148,9 +148,3 @@ It stands as a scalable framework for any organization looking to automate repor
 **Saurav Kumar**
 📍 Delhi, India
 🔗 [LinkedIn](https://www.linkedin.com/in/sauravkumaar/) • [GitHub](https://github.com/srvmann) • [Portfolio](https://www.datascienceportfol.io/thisissauurav)
-
-```
-
----
-2. Or generate a **PDF version** formatted for your portfolio (with branding and visuals)?
-```
